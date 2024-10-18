@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add();">+</button>
+    <button onclick="sub();">-</button>
+    <button onclick="mul();">*</button>
+    <button onclick="dev();">/</button>
+    <button onclick="rem();">%</button>
+
+    <script>
+
+    var a = 5;
+    var b = 3;
+    function add(){
+        document.write(a,"+",b,"=",a+b,"<br>");
+        console.log(a,"+",b,"=",a+b);
+    }
+    function sub(){
+        document.write(a,"-",b,"=",a-b,"<br>");
+        console.log(a,"-",b,"=",a-b);
+    }
+    function mul(){
+        document.write(a,"*",b,"=",a*b,"<br>");
+        console.log(a,"*",b,"=",a*b);
+    }
+    function dev(){
+        var result = a/b;
+        result = result.toFixed(2);
+        console.log(a,"/",b,"=",result);
+        document.write(a,"/",b,"=",(a/b).toFixed(2),"<br>");
+    }
+    function rem(){
+        document.write(a,"%",b,"=",a%b,"<br>");
+        console.log(a,"%",b,"=",a%b);
+    }
+
+    </script>
+
+</body>
+</html>

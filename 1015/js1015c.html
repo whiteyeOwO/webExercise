@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 數學時間 -->
+
+    <script>
+        var a = 5;
+        var b = 3;
+        var c = window.prompt("隨便打，運算符號最好++");
+
+        document.write(a,"+",b,"=",a+b,"<br>");
+        document.write(a,"-",b,"=",a-b,"<br>");
+        document.write(a,"*",b,"=",a*b,"<br>");
+        document.write(a,"/",b,"=",a/b,"<br>");
+        document.write(a,"%",b,"=",a%b,"<br>");
+        
+        document.write(`${a}+${b}=${a+b}<br>`);//另一種寫法
+
+        //== 相等，但資料型態可以不同，=== 則必須完全相同
+        if(c === "+"){
+            document.write(a,"+",b,"=",a+b,"<br>");
+        }
+        else if(c === "-"){
+            document.write(a,"-",b,"=",a-b,"<br>");
+        }
+        else if(c === "*"){
+            document.write(a,"*",b,"=",a*b,"<br>");
+        }
+        else if(c === "/"){
+            document.write(a,"/",b,"=",a/b,"<br>");
+        }
+        else if(c === "%"){
+            document.write(a,"%",b,"=",a%b,"<br>");
+        }
+        else {
+            document.write(c,"是甚麼??");
+        }
+    </script>
+</body>
+</html>
