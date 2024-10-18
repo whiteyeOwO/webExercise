@@ -9,13 +9,24 @@
     <script>
         while(true){
             var a = window.prompt("輸入帳號(123@gmail.com)");
-            var p = window.prompt("輸入密碼(abc123)");
-            if (a !== null && p !== null){
-                if(a.trim() == "" || p.trim() == ""){
+            if(a == null){
+                window.alert(`已取消登入`);
+                continue;
+            }
+            if(a.trim() == ""){
                     window.alert(`要有內容!`);
                     continue;
                 }
+            var p = window.prompt("輸入密碼(abc123)");
+            if(p == null){
+                window.alert(`已取消登入`);
+                continue;
+            }
+            if(p.trim() == ""){
+                    window.alert(`要有內容!`);
+                    continue;
                 }
+            if (a !== null && p !== null){
                 if ( a == "123@gmail.com" && p == "abc123"){
                     window.alert(`帳密正確`);
                     break;
@@ -31,8 +42,8 @@
                 else{
                     window.alert(`帳密錯誤`);
                 }
-
             }
+        }
     </script>
 
 
