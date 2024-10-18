@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        while(true){
+            var keyin = window.prompt("輸入數字");
+            if (keyin !== null){
+                if(keyin.trim() == ""){
+                    window.alert(`要有內容!`);
+                    continue;
+                }
+                if (isNaN(Number(keyin))){
+                    window.alert(`非數字!`);
+                    continue;
+                }
+                if ( Number(keyin)>=0 && Number(keyin)<60){
+                    b++;
+                    a = a + Number(keyin);
+                }
+                else if( Number(keyin)>=60 &&  Number(keyin)<=100){
+                    c++;
+                    a = a + Number(keyin);
+                }
+                else{
+                    window.alert(`無效成績`);
+                }
+
+            }
+            else{
+                break
+            }
+            console.log("輸入結束");
+        }
+        document.write("及格人數:",c,"人<br>");
+        document.write("不及格人數:",b,"人<br>");
+        document.write("總分:",a,"分<br>");
+        document.write("總平均:",(a/(b+c)).toFixed(2),"分<br>");
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var a = 0;
+        while(true){
+            var keyin = window.prompt("輸入數字");
+            if (keyin !== null){
+                if(keyin.trim() == ""){
+                    window.alert(`要有內容!`);
+                    continue;
+                }
+                if (isNaN(Number(keyin))){
+                    window.alert(`非數字!`);
+                    continue;
+                }
+                a++;
+            }
+            else{
+                break
+            }
+            console.log("輸入結束");
+        }
+        window.alert(`共輸入了${a}次`);
+
+
+    </script>
+
+</body>
+</html>

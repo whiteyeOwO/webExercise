@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var c = window.prompt("隨便一個數字");
+        c = c%2;
+
+        //判斷資料型態
+        console.log(typeof(c));
+
+        //轉換成數值
+        console.log(Number(c));//保留小數位
+        console.log(parseInt(c));//只保留整數
+
+        
+        if(isNaN(Number(c)) ){
+            document.write("不是數字!");
+        }
+        else{
+            if(c == 0 ){
+            document.write("偶數!");
+            }
+            else {
+            document.write("奇數!");
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

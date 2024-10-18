@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = Number(window.prompt("單價"));
+        var b = Number(window.prompt("數量"));
+        var total = a*b
+        var shipping = (total * 0.01).toFixed(0);
+
+        if(isNaN(a) || isNaN(b)){
+            document.write("請正常輸入!");
+        }
+        else{
+            if(total < 1000){
+                document.write("單價:",a,"<br>");
+                document.write("數量:",b,"<br>");
+                document.write("小計:",total,"<br>");
+                document.write("運費:",shipping,"<br>");
+            }
+            else{
+                document.write("單價:",a,"<br>");
+                document.write("數量:",b,"<br>");
+                document.write("小計:",total,"<br>");
+                document.write("運費:",0,"<br>");
+            }
+        }
+    
+
+
+
+    </script>
+</body>
+</html>
