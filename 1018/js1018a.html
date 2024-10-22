@@ -8,31 +8,41 @@
 <body>
     <script>
         while(true){
-            var a = window.prompt("輸入帳號");
-            var p = window.prompt("輸入密碼");
-            if (a !== null && p !== null){
-                if(a.trim() == "" || p.trim() == ""){
+            var a = window.prompt("輸入帳號(123@gmail.com)");
+            if(a == null){
+                window.alert(`已取消登入`);
+                continue;
+            }
+            if(a.trim() == ""){
                     window.alert(`要有內容!`);
                     continue;
                 }
-                }
-                if ( a == "123@gmail.com" && p == "abc123"){
-                    window.alert(`帳密正確`);
-                    break;
-                }
-                else if( a !== "123@gmail.com" && p == "abc123"){
-                    window.alert(`帳號錯誤`);
-                    continue;
-                }
-                else if( a == "123@gmail.com" && p !== "abc123"){
-                    window.alert(`密碼錯誤`);
-                    continue;
-                }
-                else{
-                    window.alert(`帳密錯誤`);
-                }
-
+            var p = window.prompt("輸入密碼(abc123)");
+            if(p == null){
+                window.alert(`已取消登入`);
+                continue;
             }
+            if(p.trim() == ""){
+                    window.alert(`要有內容!`);
+                    continue;
+                }
+            
+            if ( a == "123@gmail.com" && p == "abc123"){
+                window.alert(`帳密正確`);
+                break;
+            }
+            else if( a !== "123@gmail.com" && p == "abc123"){
+                window.alert(`帳號錯誤`);
+                continue;
+            }
+            else if( a == "123@gmail.com" && p !== "abc123"){
+                window.alert(`密碼錯誤`);
+                continue;
+            }
+            else{
+                window.alert(`帳密錯誤`);
+            }
+        }
     </script>
 
 

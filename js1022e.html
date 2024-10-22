@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="fun1()">無參數，無回傳值</button>
+    <button onclick="alert(fun2())">無參數，有回傳值</button>
+    <button onclick="fun3(5,3)">有參數，無回傳值</button>
+    <button onclick="alert(fun4(3,2))">有參數，有回傳值</button>
+    <!-- <button onclick="alert(fun5(3,2))">根據參數判斷回傳值是否為奇數</button> -->
+    <script>
+        console.log(fun5(3,2,"+"));
+        function fun1(){
+            console.log("Hi");
+        }
+        function fun2(){
+            return "Hello";
+        }
+        function fun3(a,b){
+            console.log(a+b);
+        }
+        function fun4(a,b){
+            return a+b;
+        }
+        function fun5(n1,n2,symbol){
+            if(isNaN(Number(n1)) || isNaN(Number(n2))){
+                return `${n1} 或 ${n2} 不是數字`;
+            }
+            if(symbol == "+"){
+                if((n1 + n2)%2 == 1 ){
+                    return `${n1} + ${n2} 是奇數`;
+                }
+                else{
+                    return `${n1} + ${n2} 不是奇數`;
+                } 
+            }
+            else if(symbol == "-"){
+                if((n1 - n2)%2 == 1 ){
+                    return `${n1} - ${n2} 是奇數`;
+                }
+                else{
+                    return `${n1} - ${n2} 不是奇數`;
+                } 
+            }
+            else if(symbol == "*"){
+                if((n1 * n2)%2 == 1 ){
+                    return `${n1} * ${n2} 是奇數`;
+                }
+                else{
+                    return `${n1} * ${n2} 不是奇數`;
+                } 
+            }
+            else if(symbol == "/"){
+                if((n1 / n2)%2 == 1 ){
+                    return `${n1} / ${n2} 是奇數`;
+                }
+                else{
+                    return `${n1} / ${n2} 不是奇數`;
+                } 
+            }
+            else{
+                return `${symbol} 不是運算符號`;
+            }
+        }
+    </script>
+
+</body>
+</html>
