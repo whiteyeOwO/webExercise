@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="myP1">我是段落</p>
+    <button onclick="change3()">更換段落內容</button>
+
+    <script>
+    //一般函式寫法
+    function change1() {
+    // 取得段落myP1
+    var p1= document.getElementById('myP1');
+    // 更改内容
+    p1.innerHTML = '内容已更改1';
+    }
+    //匿名函式寫法
+    var change2 = function() {
+    // 取得段落myP1
+    var p1= document.getElementById('myP1');
+    // 更改内容
+    p1.innerHTML = '内容已更改2';
+    }
+
+    //箭頭函式寫法
+    var change3 = () => {
+    // 取得段落myP1
+    var p1= document.getElementById('myP1');
+    // 更改内容
+    p1.innerHTML = '内容已更改3';
+    }
+
+    // var blood = "o";
+    // blood = blood.toUpperCase(); 可以轉大寫
+    
+</script>
+</body>
+</html>

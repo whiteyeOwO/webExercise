@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>猜數字!</p>
+    <p id="ans">答案:</p>
+    <hr>
+    <!-- <p id="result">回答結果:</p> -->
+
+    <script>
+        function getRandom(min,max){
+            var a = Math.floor(Math.random()*max)+min;
+            console.log(`${min}~${max}之間的亂數值為${a}`);
+            return a;
+        }
+        var min = 1;
+        var max = 100;
+        var bingo = getRandom(min,max);
+        // alert(bingo);
+        var ans = document.getElementById("ans");
+        ans.innerHTML = ans.innerHTML+bingo;
+
+        while(true){
+            var input = prompt("請輸入一個數字");
+            if (input !== null){
+                if(input.trim() == ""){
+                    alert("要有內容!");
+                    continue;
+                }
+                if(isNaN(Number(input)) ){
+                    alert("不是數字!");
+                    continue;
+                }
+                if(input < bingo){
+                    alert(`${input} => 太小了(提示:${input}~${max})`);
+                    min = input;
+                    continue;
+                }
+                else if (input > bingo){
+                    alert(`${input} => 太大了(提示:${min}~${input})`);
+                    max = input;
+                    continue;
+                }
+                else{
+                    alert(`${input} => 猜對了!`);
+                    break;
+                }
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

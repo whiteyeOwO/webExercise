@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>BMI</p>
+
+    <script>
+        function getBMI(h,w){
+            return(w/Math.pow(h/100,2)).toFixed(1);
+        }
+
+        var ansBMI = getBMI(156,50);
+        var p2 = document.querySelector("p");
+        var str = "";
+
+        if(ansBMI < 18.5){
+            str = "體重過輕";
+        }
+        else if(ansBMI >= 18.5 && ansBMI < 24){
+            str = "體重正常";
+        }
+        else if(ansBMI >= 24){
+            str = "體重過重";
+        }
+        p2.innerHTML = `BMI=${ansBMI} => ${str}`;
+
+    </script>
+</body>
+</html>
