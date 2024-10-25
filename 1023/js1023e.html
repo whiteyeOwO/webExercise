@@ -36,13 +36,13 @@
                     continue;
                 }
                 if(input < bingo){
+                    min = Math.max(min, input);
                     alert(`${input} => 太小了(提示:${input}~${max})`);
-                    min = input;
                     continue;
                 }
                 else if (input > bingo){
+                    max = Math.min(max, input);
                     alert(`${input} => 太大了(提示:${min}~${input})`);
-                    max = input;
                     continue;
                 }
                 else{
