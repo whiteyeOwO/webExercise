@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // var book1 = "HTML";
+        // var book2 = "CSS";
+        // var book3 = "JavaScript";
+
+        var books = ["HTML","CSS","JavaScript"];
+        // for (var i=0;i<3;i++){
+        //     console.log(books[i]);
+        // }
+
+        books[2] = "JS";
+        console.log(books[2]);
+
+        // 可中途加入，但只能依序寫入
+        books[3] = "abc";
+        console.log(books[3]);
+
+        // 取得陣列長度
+        console.log(books.length);
+
+        // 取出陣列所有值
+
+        // for
+        for (var i=0;i<books.length;i++){
+            console.log(books[i]);
+        }
+
+        // for of
+        for(var n of books){
+            console.log(n);
+        }
+
+        // forEach
+        books.forEach((b) => {
+            console.log(b);
+        });
+        
+        // map
+        books.map((c) => {
+            console.log(c);
+        });
+
+    </script>
+</body>
+</html>

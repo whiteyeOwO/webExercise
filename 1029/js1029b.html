@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var arr1 = [1,2,3,4,5,"12345"];
+
+        for (var i=0;i<arr1.length;i++){
+            if (typeof(arr1[i]) =="string"){
+                console.log(arr1[i]);
+            }
+        }
+
+        for(var n of arr1){
+            if (typeof(arr1[n]) =="string"){
+                console.log(arr1[n]);
+            }
+        }
+
+        arr1.forEach((b) => {
+            if (typeof(arr1[b]) =="string"){
+                console.log(arr1[b]);
+            }
+        });
+
+        arr1.map((c) => {
+            if (typeof(arr1[c]) =="string"){
+                console.log(arr1[c]);
+            }
+        });
+
+    </script>
+</body>
+</html>

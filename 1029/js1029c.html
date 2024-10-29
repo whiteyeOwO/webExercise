@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [5,60,3,90,33,1,100];
+
+        /*var arr2 = [];
+        arr2 = arr1.filter((data) => {
+            if(typeof(data) === "number" ){
+                return data;
+            }
+        });*/
+
+        arr1 = arr1.filter((data) => {
+            if(typeof(data) === "number" ){
+                return data;
+            }
+        });
+
+        var max = arr1[0];
+        var min = arr1[1];
+        
+        for( var i = 0;i<arr1.length;i++){         
+                if( arr1[i] > max){
+                    max = arr1[i];
+                }
+                if(arr1[i] < min){
+                    min = arr1[i];
+                }
+        }
+        
+        console.log(`最大值${max},最小值${min}`);
+
+    </script>
+</body>
+</html>
