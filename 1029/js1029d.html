@@ -9,13 +9,13 @@
     
     <script>
         var arr1 = [5,60,3,"123",90,true,33,1,100];
-        var arr2 = [];
+
+        // 方法一
+        /*var arr2 = [];
 
         for( var i = 0;i < arr1.length;i++){ 
-                if(typeof arr1[i] === "number" ){        
-                    if( arr1[i] %2 === 1){
-                        arr2[i] = 2*arr1[i];
-                    } 
+                if(typeof arr1[i] === "number" &&　arr1[i] %2 === 1){     
+                    arr2[i] = 2*arr1[i];
                 }
         }
 
@@ -25,7 +25,20 @@
             }
         });
 
-        console.log(arr2);
+        console.log(arr2);*/
+
+
+        // 方法二
+        var odds = arr1.filter((a) => {
+            if (typeof a === "number" &&  a %2 === 1){
+                return true;
+            }
+        });
+        odds = odds.map((b) => {
+            return b*2;
+        });
+
+        console.log(odds);
 
     </script>
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [1,5,100,3,30];
+
+        // 排序遞增
+        arr1.sort((a,b) => {
+            return a - b;
+        });
+        console.log(arr1);
+
+        // 排序反轉
+        console.log(arr1.reverse());
+
+        // 取出最後一個值並移除
+        console.log(arr1.pop());
+
+        // 純查看值
+        console.log(arr1[arr1.length - 1]);
+
+        // 取出第一個值並移除
+        console.log(arr1.shift());
+
+        // 純查看值
+        console.log(arr1[0]);
+
+        // 新增陣列值到最後
+        arr1.push(88);
+        console.log(arr1);
+
+        // 新增陣列值到最前面
+        arr1.unshift(23);
+        console.log(arr1);
+
+        console.log(`5的位置:${arr1.indexOf(5)}`); //指定元素第一次的位置
+        console.log(`30的位置:${arr1.lastIndexOf(30)}`); //指定元素最後一次的位置  //不存在的值會回傳-1
+        console.log(`5是否存在:${arr1.includes(5)}`); // 判斷元素是否存在
+
+        // 找出所有5的位置
+        if (arr1.includes(5)){
+            arr1.map((n1,index) => {
+                if (n1 == 5){
+                    console.log(index);
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
