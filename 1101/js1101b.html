@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function jud(numb) {               
+            if (numb < 0) {
+                if(numb %2 == 0){
+                    return "負偶數";
+                }
+                else{
+                    return "負奇數";
+                }              
+            }
+            else if (numb > 0){
+                if(numb %2 == 0){
+                    return "正偶數";
+                }
+                else{
+                    return "正奇數";
+                }    
+            }
+            else{
+                return "0"
+            }
+        }
+
+        while (true) {
+
+            var num  = window.prompt("輸入一個數字");
+            if (num !== null){
+                    if(num.trim() == ""){
+                        window.alert(`要有內容!`);
+                        continue;
+                    }
+                    if (isNaN(Number(num))){
+                        window.alert(`非數字!`);
+                        continue;
+                    }
+                    num = Number(num).toFixed(0);
+                    alert(`數字是${jud(num)}`);  
+            }
+            else{
+                break;
+            }          
+        }
+
+    </script>
+</body>
+</html>

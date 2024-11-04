@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="gam(1,49,1,49,6,'大樂透');">大樂透</button>
+    <script>
+        function gam(min,max,spmin,spmax,num,gamName){
+            var result = [];
+            var countMap = Array(max).fill(0);
+            for(j = 0; j < 1000; j++ ){
+                var bingo = new Set();
+                var min;
+                var max;
+                var spmin;
+                var spmax;
+                var num;
+                var gamName;
+                while (bingo.size < num) {
+                var a = Math.floor(Math.random() * (max - min + 1)) + min;
+                bingo.add(a);
+                }
+                bingo = Array.from(bingo);
+                var sp = Math.floor(Math.random()*spmax)+spmin;
+                if (sp == 0) sp = "無特別號";
+                while (bingo.includes(sp) == true && gamName == "大樂透"){
+                    sp = Math.floor(Math.random()*spmax)+spmin;
+                }
+                result.push([bingo, sp]);
+                bingo.forEach(a => countMap[ a - 1 ]++);
+                countMap[ sp - 1]++;
+            }
+            //return { result, countMap };
+            console.log('大樂透號碼+特別號1000組：', result);
+            console.log('1～49的個別號碼的次數:');
+            for (var i = 0; i < countMap.length; i++) {
+                console.log(`${i + 1}: ${countMap[i]}次`)
+            };
+        }
+    </script>
+</body>
+</html>

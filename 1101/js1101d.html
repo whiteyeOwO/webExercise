@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jud(n) {
+            var count = 0;
+            var num = [];
+    
+            for (var i = 1; i <= 100; i++) {
+                if (i % n === 0) {
+                    num.push(i);
+                    count++;
+                }
+            }        
+            let brnum = '';
+            for (let i = 0; i < num.length; i++) {
+                brnum += num[i];
+                if ((i + 1) % 5 === 0) {
+                    brnum += "<br>";
+                } 
+                else {
+                    brnum += ', ';
+                }
+            }
+            return `${brnum}1-100 有 ${count} 個整數可以被 ${n} 整除`;
+        }
+
+        while (true) {
+
+            var input  = window.prompt("輸入一個數字");
+            if (input !== null){
+                    if(input.trim() == ""){
+                        window.alert(`要有內容!`);
+                        continue;
+                    }
+                    if (isNaN(Number(input))){
+                        window.alert(`非數字!`);
+                        continue;
+                    }
+                    input = Number(input).toFixed(0);
+                    document.write(jud(input));
+                    break;
+            }
+            else{
+                break;
+            }          
+        }
+
+    </script>
+</body>
+</html>

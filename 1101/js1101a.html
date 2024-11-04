@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Grade(score) {               
+            if (score < 0 || score > 100) {
+                return "err! 分數範圍 0-100";
+
+            } else if (score >= 80) {
+                return '等級 A';
+            } else if (score >= 70) {
+                return '等級 B';
+            } else if (score >= 60) {
+                return '等級 C';
+            } else {
+                return '等級 D';
+            }
+        }
+
+        while (true) {
+
+            var score  = window.prompt("輸入一個分數");
+            if (score !== null){
+                    if(score.trim() == ""){
+                        window.alert(`要有內容!`);
+                        continue;
+                    }
+                    if (isNaN(Number(score))){
+                        window.alert(`非數字!`);
+                        continue;
+                    }
+                    score = Number(score).toFixed(0);
+                    alert(`分數等級是${Grade(score)}`);  
+            }
+            else{
+                break;
+            }          
+        }
+
+    </script>
+
+</body>
+</html>
