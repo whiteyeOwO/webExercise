@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="subjects">HTML</li>
+        <li class="subjects">CSS</li>
+        <li class="subjects">JS</li>
+    </ul>
+
+    <ul>
+        <li class="drinks">美式</li>
+        <li class="drinks">拿鐵</li>
+        <li id="blackTea" class="drinks">紅茶</li>
+    </ul>
+
+    <script>
+        let subjects = document.getElementsByClassName("drinks");
+        for (let i = 0; i < subjects.length; i++){
+            console.log(subjects[i].textContent);
+        }
+        let subject = document.querySelector("#blackTea").textContent;
+        console.log(subject);
+
+        let Subject = document.querySelectorAll(".subjects");
+        for (let i = 0; i < Subject.length; i++){
+            console.log(Subject[i].innerHTML);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>取得元素屬性值</h1>
+    <hr>
+    <a id="engine" href="https://www.google.com.tw/?hl=zh_TW">google</a>
+    <button id="btnEngine">換搜尋引擎</button>
+
+    <script>
+
+        document.querySelector("#btnEngine").addEventListener("click",() => {
+            let engine = document.getElementById("engine");
+            engine.href = "https://www.bing.com/";
+        });
+    </script>
+</body>
+</html>

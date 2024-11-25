@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>文件物件模型-DOM</h1>
+    <hr>
+    <form>
+        請選擇選修科目:
+        <input name="subjects" type="checkbox" value="html">HTML
+        <input name="subjects" type="checkbox" value="css" >CSS
+        <input name="subjects" type="checkbox" value="js" checked="true">JavaScript
+        <input type="button" onclick="getSubjects()" value="送出">
+        <input id="btn1" type="button" value="送出2">
+    </form>
+
+    <script>
+        let subjects = document.getElementsByName("subjects");
+
+        function getSubjects() {
+            for (let i = 0; i < subjects.length; i++){
+                if (subjects[i].checked){
+                    console.log(subjects[i].value);
+                }
+            }
+        }
+        
+        document.getElementById("btn1").addEventListener("click",getSubjects);
+        
+    </script>
+</body>
+</html>
