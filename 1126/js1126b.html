@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul-1">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input id="text1" type="text">
+    <button id="btn1">增加項目</button>
+    <br>
+    <input id="deltext" type="text">
+    <button id="btn2">移除項目</button>
+
+    <script>
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", () => {
+            let newElm = document.createElement("li");
+            let newTextContent = document.getElementById("text1");
+            let newText = document.createTextNode(newTextContent.value);
+            newElm.appendChild(newText);
+            let pos = document.getElementById("ul-1");
+            pos.appendChild(newElm);
+        });
+
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click",() => {
+            let liCount = document.getElementsByTagName("li").length;
+            let delNum = document.getElementById("deltext").value-1;
+            if(delNum >= 0 && delNum < liCount){
+                let removeElm = document.getElementsByTagName("li")[delNum];
+                let parentElm = removeElm.parentNode;
+                parentElm.removeChild(removeElm);
+            }
+            else{
+                alert("不在刪除範圍");
+            } 
+        });
+    </script>
+</body>
+</html>

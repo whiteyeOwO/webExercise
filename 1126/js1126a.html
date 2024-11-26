@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1">
+        <span id="span1" style="text-transform: uppercase;">Hello，JS</span>
+        <span style="display: none;">看不到~</span>
+    </p>
+    <h3>使用textContent的效果</h3>
+    <textarea name="" id="textContentOutput" rows="8" cols="70"></textarea>
+    <h3>使用innerText的效果</h3>
+    <textarea name="" id="innerTextOutput" rows="8" cols="70"></textarea>
+    <h3>使用innerHTML的效果</h3>
+    <textarea name="" id="innerHTMLOutput" rows="8" cols="70"></textarea>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        let textContentOutput = document.getElementById("textContentOutput");
+        let innerTextOutput = document.getElementById("innerTextOutput");
+        let innerHTMLOutput = document.getElementById("innerHTMLOutput");
+
+        textContentOutput.value = p1.textContent;
+        innerTextOutput.value = p1.innerText;
+        innerHTMLOutput.value = p1.innerHTML;
+
+    </script>
+
+</body>
+</html>
